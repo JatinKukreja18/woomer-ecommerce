@@ -1,0 +1,126 @@
+/**
+ * Products
+ */
+ul.products {
+	@include clearfix;
+	margin: 0;
+	padding: 0;
+
+	li.product {
+		list-style: none;
+		position: relative;
+		margin-bottom: 2em;
+
+		.woocommerce-loop-product__title {
+			font-size: 1rem;
+		}
+
+		img {
+			display: block;
+		}
+
+		.button {
+			display: block;
+		}
+	}
+}
+// card of each product on shop page
+.wm-product-card{
+	padding: 20px;
+	background: #fff;
+
+	img{
+		width: 100%;
+		display: block;
+	}
+	.title,.price{
+		font-family: $font-primary;
+		font-size: 24px;
+		font-weight: 700;
+	}
+	.content{
+		margin-top: 40px;
+		position: relative;
+	}
+	.title{
+		line-height: 1em;
+		width: calc(100% - 40px);
+		margin-bottom: 10px;
+		position: relative;
+	}
+	.wish-icon{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 20px;
+    	height: 20px;
+	}
+	.description{
+		font-family: $font-primary;
+		font-size: 14px;
+		margin: 0px;
+		line-height: 1em;
+		margin-bottom: 40px;
+	}
+	.price-container{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.add-to-cart{
+		font-size: 14px;
+		color: $primary;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	
+}
+// sections on shop
+.wm-shop-section{
+	margin-bottom: 200px;
+	.wm-shop-section-title{
+		font-size: 40px;
+		font-family: $font-secondary;
+		line-height: 50px;
+		color: $primary;
+		max-width: 505px;
+		margin-bottom: 100px;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	ul.products {
+		li.product {
+			@include column-width(3);
+			float: left;
+			margin-right: $columns__margin;
+
+			&.first {
+				clear: both;
+			}
+
+			&.last {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.columns-1 {
+		ul.products {
+			li.product {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+
+	@for $i from 2 through 6 {
+		.columns-#{$i} {
+			ul.products {
+				li.product {
+					@include column-width( $i );
+				}
+			}
+		}
+	}
+}

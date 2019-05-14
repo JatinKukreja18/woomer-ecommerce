@@ -1,0 +1,11 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: $font_secondary;
+	font-weight: 400;
+}
+.page-title{
+	color: $primary;
+	margin-top:0px;
+	margin-bottom: 100px;
+	line-height: 1.1em; 
+}
