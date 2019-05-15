@@ -144,6 +144,10 @@ function remove_shop_breadcrumbs(){
         remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
  
 }
+/**
+ * Trim zeros in price decimals
+ **/
+add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
 // custom code ends
 
 

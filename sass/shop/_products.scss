@@ -61,6 +61,9 @@ ul.products {
 		margin: 0px;
 		line-height: 1em;
 		margin-bottom: 40px;
+		height: 14px;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 	.price-container{
 		display: flex;

@@ -367,7 +367,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #2699fb;
   margin-top: 0px;
   margin-bottom: 100px;
-  line-height: 1.1em; }
+  line-height: 1.1em;
+  font-size: 40px; }
+
+.wm-section-title {
+  color: #0a0a0a;
+  margin-top: 0px;
+  margin-bottom: 100px;
+  line-height: 1.1em;
+  font-size: 40px; }
 
 p {
   margin-bottom: 1.5em; }
@@ -833,6 +841,39 @@ a {
   width: 100%;
   padding-right: 22.5px;
   padding-left: 22.5px; }
+
+.offset-1 {
+  margin-left: 8.333333%; }
+
+.offset-2 {
+  margin-left: 16.666667%; }
+
+.offset-3 {
+  margin-left: 25%; }
+
+.offset-4 {
+  margin-left: 33.333333%; }
+
+.offset-5 {
+  margin-left: 41.666667%; }
+
+.offset-6 {
+  margin-left: 50%; }
+
+.offset-7 {
+  margin-left: 58.333333%; }
+
+.offset-8 {
+  margin-left: 66.666667%; }
+
+.offset-9 {
+  margin-left: 75%; }
+
+.offset-10 {
+  margin-left: 83.333333%; }
+
+.offset-11 {
+  margin-left: 91.666667%; }
 
 @media (min-width: 768px) {
   .col-md {
