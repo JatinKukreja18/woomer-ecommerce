@@ -376,6 +376,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 100px;
   line-height: 1.1em;
   font-size: 40px; }
+  .wm-section-title.no-margin {
+    margin: 0px; }
 
 p {
   margin-bottom: 1.5em; }
@@ -442,7 +444,7 @@ ul, ol {
   margin: 0 0 1.5em 3em; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
 
 ol {
   list-style: decimal; }
@@ -471,6 +473,53 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+
+.wm-bg-accent {
+  background-color: #bce0fd; }
+
+.wm-accordion {
+  height: 68px;
+  border-bottom: 1px solid #0a0a0a;
+  overflow: hidden;
+  transition: .2s; }
+  .wm-accordion:first-child {
+    border-top: 1px solid #0a0a0a; }
+  .wm-accordion.active .wm-toggle-icon:after {
+    transform: rotate(0deg); }
+  .wm-accordion .wm-accordion-title {
+    display: flex;
+    color: #2699fb;
+    font-family: "HelveticaNeue";
+    height: 68px;
+    align-items: center;
+    margin: 0px;
+    cursor: pointer;
+    position: relative; }
+  .wm-accordion .wm-accordion-body {
+    padding: 40px 0px;
+    font-size: 12px;
+    color: #2699fb;
+    line-height: 2em;
+    transform-origin: top;
+    transition: .3s; }
+  .wm-accordion .wm-toggle-icon {
+    width: 18px;
+    position: absolute;
+    top: 50%;
+    display: block;
+    height: 18px;
+    transform: translateY(-50%);
+    right: 20px; }
+    .wm-accordion .wm-toggle-icon:after, .wm-accordion .wm-toggle-icon:before {
+      content: "";
+      width: 18px;
+      position: absolute;
+      height: 2px;
+      background: #0a0a0a;
+      top: 7px;
+      transition: .4s; }
+    .wm-accordion .wm-toggle-icon:after {
+      transform: rotate(90deg); }
 
 /*--------------------------------------------------------------
 # Forms

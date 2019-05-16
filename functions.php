@@ -136,7 +136,58 @@ add_action( 'wp_enqueue_scripts', 'woomer_theme_scripts' );
 
 
 
-// custom code
+/* 
+	Custom Code
+*/
+function create_faqs_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+$labels = array(
+	'name'              => _x( 'type', 'taxonomy general name', 'textdomain' ),
+	'singular_name'     => _x( 'type', 'taxonomy singular name', 'textdomain' ),
+	'search_items'      => __( 'Search Types', 'textdomain' ),
+	'all_items'         => __( 'All Types', 'textdomain' ),
+	'parent_item'       => __( 'Parent Type', 'textdomain' ),
+	'parent_item_colon' => __( 'Parent Type:', 'textdomain' ),
+	'edit_item'         => __( 'Edit Type', 'textdomain' ),
+	'update_item'       => __( 'Update Type', 'textdomain' ),
+	'add_new_item'      => __( 'Add New Type', 'textdomain' ),
+	'new_item_name'     => __( 'New Type Name', 'textdomain' ),
+	'menu_name'         => __( 'Type', 'textdomain' ),
+);
+
+$args = array(
+	'hierarchical'      => true,
+	'labels'            => $labels,
+	'show_ui'           => true,
+	'show_admin_column' => true,
+	'query_var'         => true,
+	'rewrite'           => array( 'slug' => 'type' ),
+);
+
+	register_taxonomy( 'type', array( 'faqs' ), $args );
+}
+add_action( 'init', 'create_faqs_taxonomies', 0 );
+
+// Our custom post type function
+function create_faq_posttype() {
+ 
+    register_post_type( 'faqs',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'FAQs' ),
+                'singular_name' => __( 'FAQ' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+			'rewrite' => array('slug' => 'faq'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_faq_posttype' );
+
+
 add_action('template_redirect', 'remove_shop_breadcrumbs' );
 function remove_shop_breadcrumbs(){
  
@@ -148,8 +199,10 @@ function remove_shop_breadcrumbs(){
  * Trim zeros in price decimals
  **/
 add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
-// custom code ends
 
+/* 
+	Custom Code Ends
+*/
 
 
 
