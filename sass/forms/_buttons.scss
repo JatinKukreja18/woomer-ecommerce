@@ -13,10 +13,24 @@ input[type="submit"] {
 
 	&:hover {
 		border-color: $color__border-button-hover;
+		background: lighten($primary,10%);
 	}
 
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+	}
+}
+
+.wm-btn{
+	padding: 14px 30px;
+	font-size: 10px;
+	background: $primary;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+
+	&.wm-btn-full{
+		width: 100%
 	}
 }

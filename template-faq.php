@@ -37,7 +37,7 @@ get_header();
 				<section class="wm-site-wrapper">
 					<div class="row">
 						<div class="faq-section-title col-md-3">
-							<h1 class="wm-section-title no-margin">	
+							<h1 class="wm-section-title no-marginw">	
 									<?php echo $cat->name ?>
 							</h1>
 						</div>
