@@ -1,4 +1,4 @@
-$color__background-body: rgb(245,245,245);
+$color__background-body: #ffffff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
@@ -19,7 +19,10 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-$primary: rgb(38,153,251);
-$secondary: rgb(10,10,10);
-$accent:rgb(188,224,253);
+$primary: rgb(229,100,100);
+$primary-light: rgb(244,177,176);
+$secondary: rgb(54,55,78);
+$accent:rgb(255,242,243);
+$accent-grey: rgb(151,170,188);
+$accent-grey-light: rgb(239,236,233);
 $accent-light: rgb(241,249,255);

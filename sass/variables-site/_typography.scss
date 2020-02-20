@@ -1,8 +1,22 @@
-$font__main: sans-serif;
+@font-face{
+    font-family: "HelveticaNeue-Bold";
+    src: url('../../HelveticaNeue-Bold.ttf');
+}
+@font-face{
+    font-family: "HelveticaNeue";
+    src: url('../../HelveticaNeue.ttf');
+}
+@font-face{
+    font-family: "Futura-Medium";
+    src: url('../../FuturaMedium.otf');
+}
+    
+$font__main: "Futura-Medium", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
-$font_primary: "HelveticaNeue";
-$font_secondary: Georgia;
+$font_Futura: "Futura-Medium",sans-serif;
+$font_Helvetica: "HelveticaNeue",sans-serif;
+$font_Helvetica_Bold: "HelveticaNeue-Bold",sans-serif;

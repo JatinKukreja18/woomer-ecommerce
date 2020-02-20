@@ -2,7 +2,7 @@
 // top footer
 .wm-footer-top{
     padding: 40px 45px;
-    background: $accent-light;
+    background: $accent-grey;
     display: flex;
 }
 .site-footer{
@@ -15,7 +15,7 @@
         display:block;
         font-weight: 400;
         font-size: 14px;
-        color: $primary;
+        color: #ffffff;
         margin-bottom: 20px;
     }
 }
@@ -31,7 +31,7 @@
                     text-decoration: none;
                     font-size: 10px;
                     line-height: 26px;
-                    color: $primary;
+                    color: #ffffff;
                     
                     &:hover{
                         text-decoration: underline;
@@ -53,9 +53,11 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background: $primary;
-    color: #fff;
+    background: #ffffff;
+    color: $primary;
     padding: 0px 45px;
+    font-size: 10px;
+    font-family: $font_Helvetica;
 
     ul{
         display: flex;
@@ -63,6 +65,7 @@
         margin: 0px -15px;
         li{
             padding: 0px 15px;
+            font-size: 14px;
         }
     }
 }

@@ -1,0 +1,163 @@
+.wm-banner-products{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    .wm-banner-product{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 45px;
+        z-index: -1;
+        opacity: 0;
+        transition: .5s;
+
+        .wm-banner-info{
+            position: absolute;
+            left: 45px   ;
+            top: 50%; 
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            .wm-bi-price{
+                font-family: $font_Futura;
+                font-weight: 300;
+                color: #fff;
+                font-size: 22px;
+                margin-bottom: 20px;
+                width: 130px;
+
+                &.has-sale    .reg-price{
+                    position: relative;
+                    font-weight: 300;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        height: 2px;
+                        width: calc(100% - 4px);
+                        top: calc(50% - 1px);
+                        left: 0;
+                        background: currentColor;
+                    }
+                }
+            }
+            .wm-bi-title{
+                margin-bottom: 28px;
+                width: 130px;
+                color: #fff;
+            }
+        }
+
+        &.active{
+            z-index: 0;
+            opacity: 1;
+            transition: 1s;
+        }
+    }
+}
+.wm-banner-color-options{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    // background: black;
+    position: absolute;
+    bottom: 45px;
+    .wm-banner-color-option{
+        transition: .5s;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+        margin: 0px 5px;
+        a{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: currentColor;
+            border-radius: 50%;
+            transition: .5s;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+    }
+    .wm-banner-color-option.active{
+        border-color: #fff; 
+        a{
+            box-shadow: 0 3px 6px 0 rgba(0,0,0,.16)
+        }
+    }
+}
+
+
+// Sections
+.home-section{
+    // padding: 0 45px;
+    display: flex;
+    flex-wrap: wrap;
+    background: $accent;
+    .first-half,
+    .second-half{
+        width: 50%;
+    }
+    .first-half{
+        padding: 100px 22.5px 100px 45px;
+        position: relative;
+        z-index: 0;
+        &:before{
+            content: '';
+            position: absolute;
+            width: calc(100%  - 22.5px);
+            height: 100%;
+            background: #fff;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    .second-half{
+        padding: 100px 45px 100px 22.5px;
+        background: $accent;
+    }
+    .full{
+        width: 100%;
+    }
+    &.is-full-coloured{
+        background: $accent;
+        .first-half,.second-half{
+            background: $accent;
+            &:before{
+                content: none;
+            }
+        }
+    }
+    &.less-spaced{
+        .first-half{
+            padding: 40px 22.5px 60px 45px;
+        }
+        .second-half{
+            padding: 40px 45px 60px 22.5px;
+        }
+    }
+}
+
+// product 
+.home-product-box{
+    text-align: right;
+    margin: 40px 0 60px 0;
+    img{
+        margin-bottom: 40px;
+    }
+}

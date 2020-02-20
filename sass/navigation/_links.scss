@@ -1,13 +1,13 @@
 a {
-	color: $color__link;
+	color: $primary;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $primary-light;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $primary;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -15,5 +15,46 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
+	}
+}
+
+a.wm-link,
+a.wm-link:visited{
+	font-size: 14px;
+	text-decoration: none;
+	color: $primary;
+	&.caps{
+		text-transform: uppercase;
+	}
+	&.with-arrow{
+		padding-right: 36px;
+		position: relative;
+		transition: .3s;
+		&:before{
+			position: absolute;
+			height: 12px;
+			width: 12px;
+			border-right: 2px solid #e56464;
+			border-top: 2px solid #e56464;
+			content: '';
+			right: 2px;
+			top: 3px;
+			transform: rotate(45deg);
+			transform-origin: center;
+		}
+		&:after{
+			position: absolute;
+			height: 2px;
+			background: #e56464;
+			content: '';
+			width: 16px;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 0px 2px 2px 0px;
+		}
+		&:hover{
+			padding-right: 40px;
+		}
 	}
 }

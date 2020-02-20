@@ -1,0 +1,30 @@
+.wm-login-modal{
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100vw;
+    // height: 100vh;
+    // z-index: 5;
+    background: $accent-grey-light;
+    // display: flex;
+    // padding: 50px 0;
+    // // align-items: flex-start;
+    // overflow: scroll;
+    // overflow: auto;
+    .modal-body{
+        background-color: transparent;
+    }
+}
+.wm-login-container{
+    display: flex;
+    // margin: auto;
+}
+.wm-login-form{
+    width: 50%;
+    padding: 40px 45px;
+    background: #fff;
+}
+.wm-login-image{
+    width: 50%;
+    background: $primary-light;
+}

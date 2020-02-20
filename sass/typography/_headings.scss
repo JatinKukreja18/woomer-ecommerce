@@ -1,7 +1,20 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: $font_secondary;
+	font-family: $font_Futura;
 	font-weight: 400;
+	color: $secondary;
+	margin: 0;
+}
+h1{
+	font-size: 30px;
+	margin-bottom: 40px;
+}	
+h2{
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+h1[value="My account"]{
+	display: hidden;
 }
 .page-title{
 	color: $primary;
@@ -21,8 +34,31 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 .wm-body-text-blue{
-	color: $primary;
+	color: $secondary;
 	margin: 0px;
 	line-height: 24px; 
 	font-size: 14px;
+}
+
+
+p,.wm-text{
+	color: $secondary;
+	line-height: 22px; 
+	font-size: 14px;
+	font-family: $font_Helvetica;
+	margin: 0 0 20px 0;
+}
+.wm-text{
+	font-family: $font_Helvetica;
+}
+.wm-sub-text{
+	font-size: 10px;
+	line-height: 12px;
+	font-family: $font_Helvetica;
+	color: $secondary;
+	margin: 0 0 20px 0;
+	a{
+		color: $secondary;
+		font-family: $font_Helvetica_Bold;
+	}
 }

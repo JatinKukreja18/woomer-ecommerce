@@ -59,7 +59,7 @@ figure {
 	.wm-accordion-title{
 		display: flex;
 		color: $primary;
-		font-family: $font_primary;
+		font-family: $font_Futura;
 		height: 68px;
 		align-items: center;
 		margin: 0px;
@@ -95,4 +95,11 @@ figure {
 			transform: rotate(90deg);
 		}
 	}
+}
+
+.mb-40{
+	margin-bottom: 40px;
+}
+.noMargin{
+	margin: 0 !important;
 }
